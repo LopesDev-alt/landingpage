@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Produtos próprios de hardware e software para redes, sistemas embarcados e segurança.">
+<title>Sentillis Security</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#topo" aria-label="Sentillis Security, início">
+      <b>SENTILLIS</b><span>SECURITY</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#softwares">Softwares</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="cart-btn" id="open-cart" type="button" aria-label="Abrir carrinho">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.1 10.2a1.5 1.5 0 0 0 1.5 1.2h8.4a1.5 1.5 0 0 0 1.5-1.1L20.5 8H6.1"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg>
+      <span class="cart-count" id="cart-count" data-empty="true">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label" style="margin-bottom:20px">Hardware / Software / Cibersegurança</p>
+        <h1><span>Tecnologia.</span><span>Hardware.</span><span>Segurança.</span></h1>
+        <p class="sub">Produtos próprios de hardware e software para redes, sistemas embarcados e segurança.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#produtos">Ver produtos</a>
+          <a class="btn btn-ghost" href="#softwares">Ver softwares</a>
+        </div>
+      </div>
+      <figure class="hero-art" style="margin:0" aria-hidden="true">
+        <div id="hero-art"></div>
+        <figcaption><span class="label">Layout ilustrativo</span><span class="label">Não é um produto</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap facts-row">
+      <div class="fact"><b>5</b><span>modelos de hardware próprio</span></div>
+      <div class="fact"><b>5</b><span>ferramentas de software</span></div>
+      <div class="fact"><b>3 un.</b><span>por modelo no lote inicial</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="produtos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Hardware / <span id="hw-count"></span> modelos</span>
+        <h2>Placas para redes e sistemas embarcados</h2>
+        <p>Cada modelo tem fotografia real, ficha técnica e prazo informados na página do produto antes da compra.</p>
+      </div>
+      <div class="grid" id="hw-grid"></div>
+      <p class="note">* Valores provisórios, ainda sem cálculo final de custo, frete, impostos e taxas de pagamento. Os prazos são estimativas e serão confirmados com o fornecedor e o método de envio.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="softwares">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Software / <span id="sw-count"></span> ferramentas</span>
+        <h2>Ferramentas digitais para análise e diagnóstico</h2>
+        <p>Venda avulsa, com download digital após a confirmação do pagamento. Use apenas em redes, dispositivos e arquivos que você esteja autorizado a analisar.</p>
+      </div>
+      <div class="grid" id="sw-grid"></div>
+      <p class="note">Preços e requisitos de cada ferramenta serão publicados quando a versão inicial, a licença e o suporte estiverem definidos.</p>
+    </div>
+  </section>
+
+  <section class="section" id="como-comprar">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Como comprar</span>
+        <h2>Escolha, pague, receba</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="n">PASSO 1</span><h3>Escolha</h3><p>Veja preço, disponibilidade e prazo em cada produto e adicione ao carrinho.</p></div>
+        <div class="step"><span class="n">PASSO 2</span><h3>Pague</h3><p>O pagamento é feito no checkout do Mercado Pago. A Sentillis não guarda dados de cartão.</p></div>
+        <div class="step"><span class="n">PASSO 3</span><h3>Receba</h3><p>A entrega começa depois da confirmação do pagamento pelo sistema, e o caminho muda entre produto físico e digital.</p></div>
+      </div>
+      <div class="deliveries">
+        <div class="delivery">
+          <h4>Entrega física (hardware)</h4>
+          <ul>
+            <li>Frete calculado ou informado antes de concluir a compra.</li>
+            <li>Com pagamento confirmado, a unidade é separada e passa por teste funcional.</li>
+            <li>Meta de expedição em até 2 dias úteis para itens em estoque.</li>
+            <li>Itens sob encomenda mostram o prazo na página do produto.</li>
+            <li>Você recebe o código de rastreio quando o envio sair.</li>
+          </ul>
+        </div>
+        <div class="delivery">
+          <h4>Entrega digital (software)</h4>
+          <ul>
+            <li>Sem frete e sem endereço de entrega.</li>
+            <li>Instruções de download e de licença chegam depois da confirmação do pagamento.</li>
+            <li>Cada página informa sistema, versão mínima, dependências e política de suporte.</li>
+            <li>A licença é de uso próprio, e o compartilhamento do arquivo não é permitido.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="servicos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Serviços / sob orçamento</span>
+        <h2>Serviços de segurança, com escopo combinado antes</h2>
+        <p>Todo trabalho começa com ativos, limites e entregáveis definidos por escrito, e só acontece em ambientes autorizados.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-row">
+          <div><h3>Diagnóstico de Segurança</h3><span class="price-note">Sob orçamento</span></div>
+          <p>Avaliação inicial de controles e riscos acordados, com relatório e recomendações.</p>
+          <button class="btn btn-ghost btn-sm" type="button" data-quote="Orçamento: Diagnóstico de Segurança">Solicitar orçamento</button>
+        </div>
+        <div class="svc-row">
+          <div><h3>Hardening de Servidores</h3><span class="price-note">Sob orçamento</span></div>
+          <p>Revisão e ajuste de configurações de segurança, atualizações, acesso remoto, firewall e privilégios em ambiente autorizado.</p>
+          <button class="btn btn-ghost btn-sm" type="button" data-quote="Orçamento: Hardening de Servidores">Solicitar orçamento</button>
+        </div>
+        <div class="svc-row">
+          <div><h3>Análise de Vulnerabilidades</h3><span class="price-note">Sob orçamento</span></div>
+          <p>Verificações controladas e autorizadas, com escopo escrito e relatório dos achados.</p>
+          <button class="btn btn-ghost btn-sm" type="button" data-quote="Orçamento: Análise de Vulnerabilidades">Solicitar orçamento</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <div class="wrap two-col">
+      <div class="about">
+        <span class="label">Sobre</span>
+        <h2 style="font-size:clamp(1.8rem,3.8vw,2.6rem);margin:12px 0 20px">Sentillis Security</h2>
+        <p>A Sentillis desenvolve hardware e software próprios com foco em cibersegurança, redes e sistemas embarcados. Cada produto é testado antes de sair, e só promete o que já foi validado.</p>
+      </div>
+      <div>
+        <ul class="principles" style="margin-top:0">
+          <li><span>Foco</span><span>Hardware, software e segurança</span></li>
+          <li><span>Teste</span><span>Cada unidade é testada antes do envio</span></li>
+          <li><span>Registro</span><span>Número de série por unidade vendida</span></li>
+          <li><span>Uso</span><span>Apenas em ambientes autorizados</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="contato">
+    <div class="wrap two-col">
+      <div>
+        <div class="section-head" style="margin-bottom:24px">
+          <span class="label">Contato</span>
+          <h2>Fale com a Sentillis</h2>
+          <p>Dúvidas sobre produto, pedido ou orçamento de serviço.</p>
+        </div>
+        <div class="channels">
+          <div class="channel"><span class="label">E-mail</span><span class="val" id="ch-email"></span></div>
+          <div class="channel"><span class="label">Instagram</span><span class="val" id="ch-ig"></span></div>
+        </div>
+      </div>
+      <form class="contact" id="contact-form" novalidate>
+        <div class="field" id="f-nome"><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name"><span class="msg" role="alert"></span></div>
+        <div class="field" id="f-email"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"><span class="msg" role="alert"></span></div>
+        <div class="field" id="f-assunto"><label for="assunto">Assunto</label><input id="assunto" name="assunto" type="text"><span class="msg" role="alert"></span></div>
+        <div class="field" id="f-mensagem"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem"></textarea><span class="msg" role="alert"></span></div>
+        <div><button class="btn btn-primary" type="submit">Enviar mensagem</button></div>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#topo" style="margin-bottom:14px"><b>SENTILLIS</b><span>SECURITY</span></a>
+        <p style="color:var(--muted);font-size:14px;max-width:34ch">Hardware, software e cibersegurança.</p>
+      </div>
+      <div>
+        <h4>Loja</h4>
+        <ul><li><a href="#produtos">Produtos</a></li><li><a href="#softwares">Softwares</a></li><li><a href="#como-comprar">Como comprar</a></li><li><a href="#servicos">Serviços</a></li></ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul>
+      </div>
+      <div>
+        <h4>Políticas</h4>
+        <ul><li><a href="#politicas">Privacidade</a></li><li><a href="#politicas">Termos de uso</a></li><li><a href="#politicas">Entrega, troca e garantia</a></li></ul>
+      </div>
+    </div>
+    <div class="policies" id="politicas">
+      <div class="policy"><h5>Política de privacidade</h5><p>Texto a publicar após revisão jurídica para a operação no Brasil.</p></div>
+      <div class="policy"><h5>Termos de uso</h5><p>Texto a publicar após revisão jurídica, incluindo o uso apenas em ambientes autorizados.</p></div>
+      <div class="policy"><h5>Entrega, troca e garantia</h5><p>Regras de envio, troca, devolução e garantia a publicar antes da abertura da loja.</p></div>
+    </div>
+    <div class="foot-note">
+      <span>Identificação comercial (razão social e CNPJ): a incluir antes da publicação.</span>
+      <span>&copy; 2026 Sentillis Security. Pagamentos processados pelo Mercado Pago.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Detalhe do produto -->
+<dialog class="detail" id="detail" aria-labelledby="detail-title">
+  <div class="dlg">
+    <div class="dlg-head">
+      <div><span class="label" id="detail-tag"></span><h2 id="detail-title"></h2></div>
+      <button class="x-btn" type="button" data-close="detail" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="dlg-body" id="detail-body"></div>
+    <div class="dlg-foot" id="detail-foot"></div>
+  </div>
+</dialog>
+
+<!-- Carrinho -->
+<dialog class="sheet" id="cart" aria-labelledby="cart-title">
+  <div class="dlg">
+    <div class="dlg-head">
+      <h2 id="cart-title">Carrinho</h2>
+      <button class="x-btn" type="button" data-close="cart" aria-label="Fechar carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="dlg-body" id="cart-body"></div>
+    <div class="dlg-foot" id="cart-foot"></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
