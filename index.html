@@ -17,11 +17,16 @@
       <b>SENTILLIS</b><span>SECURITY</span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#produtos">Produtos</a>
+      <a href="#produtos">Hardware</a>
       <a href="#softwares">Softwares</a>
+      <a href="#kits">Kits</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
+    <button class="acct-btn" id="open-account" type="button" aria-label="Entrar ou criar conta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.7-3.7 3.7-5.6 7.5-5.6s6.8 1.9 7.5 5.6"/></svg>
+      <span class="acct-label">Entrar</span>
+    </button>
     <button class="cart-btn" id="open-cart" type="button" aria-label="Abrir carrinho">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.1 10.2a1.5 1.5 0 0 0 1.5 1.2h8.4a1.5 1.5 0 0 0 1.5-1.1L20.5 8H6.1"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg>
       <span class="cart-count" id="cart-count" data-empty="true">0</span>
@@ -51,7 +56,8 @@
   <div class="facts">
     <div class="wrap facts-row">
       <div class="fact"><b>5</b><span>modelos de hardware próprio</span></div>
-      <div class="fact"><b>5</b><span>ferramentas de software</span></div>
+      <div class="fact"><b>5</b><span>ferramentas de software, planos mensal e anual</span></div>
+      <div class="fact"><b>−<span data-pct-kit></span>%</b><span>nos kits de hardware com software</span></div>
       <div class="fact"><b>3 un.</b><span>por modelo no lote inicial</span></div>
     </div>
   </div>
@@ -73,10 +79,26 @@
       <div class="section-head">
         <span class="label">Software / <span id="sw-count"></span> ferramentas</span>
         <h2>Ferramentas digitais para análise e diagnóstico</h2>
-        <p>Venda avulsa, com download digital após a confirmação do pagamento. Use apenas em redes, dispositivos e arquivos que você esteja autorizado a analisar.</p>
+        <p>Assinatura mensal ou anual, com download digital e licença depois da confirmação do pagamento. No plano anual você ganha <b><span data-pct-annual></span>% de desconto</b> sobre 12 mensalidades. Use apenas em redes, dispositivos e arquivos que você esteja autorizado a analisar.</p>
+      </div>
+      <div class="seg" role="group" aria-label="Período de cobrança">
+        <button class="seg-btn" type="button" data-billing="m" aria-pressed="false">Mensal</button>
+        <button class="seg-btn" type="button" data-billing="a" aria-pressed="true">Anual <span class="seg-tag">−<span data-pct-annual></span>%</span></button>
       </div>
       <div class="grid" id="sw-grid"></div>
-      <p class="note">Preços e requisitos de cada ferramenta serão publicados quando a versão inicial, a licença e o suporte estiverem definidos.</p>
+      <p class="note">* Valores provisórios. O plano anual custa 12 mensalidades com <span data-pct-annual></span>% de desconto. A renovação automática depende da assinatura recorrente do Mercado Pago, ainda não conectada, e as regras de cancelamento serão publicadas nas políticas. Requisitos e versão de cada ferramenta serão informados no lançamento.</p>
+    </div>
+  </section>
+
+  <section class="section ruled" id="kits">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Kits / <span id="kit-count"></span> combinações</span>
+        <h2>Hardware e software juntos, com <span data-pct-kit></span>% de desconto</h2>
+        <p>Cada kit traz uma placa e 12 meses de uma ferramenta de software. É a forma mais barata de comprar os dois.</p>
+      </div>
+      <div class="grid" id="kit-grid"></div>
+      <p class="note">* Valores provisórios. O desconto vale sobre a soma da placa com o plano anual do software. Ao fim dos 12 meses, o software renova pelo preço do plano anual. O kit é entregue em duas partes: a placa por envio físico e a licença por download digital. Por isso a conta precisa ter endereço de entrega e dados de licenciamento.</p>
     </div>
   </section>
 
@@ -87,7 +109,7 @@
         <h2>Escolha, pague, receba</h2>
       </div>
       <div class="steps">
-        <div class="step"><span class="n">PASSO 1</span><h3>Escolha</h3><p>Veja preço, disponibilidade e prazo em cada produto e adicione ao carrinho.</p></div>
+        <div class="step"><span class="n">PASSO 1</span><h3>Escolha</h3><p>Veja preço, disponibilidade e prazo em cada produto e adicione ao carrinho. Para finalizar, crie sua conta.</p></div>
         <div class="step"><span class="n">PASSO 2</span><h3>Pague</h3><p>O pagamento é feito no checkout do Mercado Pago. A Sentillis não guarda dados de cartão.</p></div>
         <div class="step"><span class="n">PASSO 3</span><h3>Receba</h3><p>A entrega começa depois da confirmação do pagamento pelo sistema, e o caminho muda entre produto físico e digital.</p></div>
       </div>
@@ -95,6 +117,7 @@
         <div class="delivery">
           <h4>Entrega física (hardware)</h4>
           <ul>
+            <li>Seu endereço de entrega fica salvo na conta.</li>
             <li>Frete calculado ou informado antes de concluir a compra.</li>
             <li>Com pagamento confirmado, a unidade é separada e passa por teste funcional.</li>
             <li>Meta de expedição em até 2 dias úteis para itens em estoque.</li>
@@ -106,6 +129,8 @@
           <h4>Entrega digital (software)</h4>
           <ul>
             <li>Sem frete e sem endereço de entrega.</li>
+            <li>Os dados de licenciamento ficam salvos na conta.</li>
+            <li>Planos mensais renovam todo mês e planos anuais, todo ano. As regras de renovação e cancelamento serão publicadas nas políticas antes da abertura da loja.</li>
             <li>Instruções de download e de licença chegam depois da confirmação do pagamento.</li>
             <li>Cada página informa sistema, versão mínima, dependências e política de suporte.</li>
             <li>A licença é de uso próprio, e o compartilhamento do arquivo não é permitido.</li>
@@ -170,7 +195,7 @@
         </div>
         <div class="channels">
           <div class="channel"><span class="label">E-mail</span><span class="val" id="ch-email"></span></div>
-          <div class="channel"><span class="label">Instagram</span><span class="val" id="ch-ig"></span></div>
+          <div class="channel"><span class="label">Instagra</span><span class="val" id="ch-ig"></span></div>
         </div>
       </div>
       <form class="contact" id="contact-form" novalidate>
@@ -245,8 +270,23 @@
   </div>
 </dialog>
 
+<!-- Conta -->
+<dialog class="detail account" id="account" aria-labelledby="account-title">
+  <div class="dlg">
+    <div class="dlg-head">
+      <div><span class="label">Conta</span><h2 id="account-title">Entrar ou criar conta</h2></div>
+      <button class="x-btn" type="button" data-close="account" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="dlg-body" id="account-body"></div>
+    <div class="dlg-foot" id="account-foot"></div>
+  </div>
+</dialog>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js"></script>
+<script src="account.js"></script>
 </body>
 </html>
